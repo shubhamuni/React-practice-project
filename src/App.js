@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Text/>
+        <Text greeting={" Welcome to robo friends website"}/>
       </div>
     );
   }

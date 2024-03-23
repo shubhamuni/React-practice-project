@@ -6,6 +6,7 @@ class Text extends Component {
             <div>
                 <h1>Hello world</h1>
                 <p>Welcome to javascript React project</p>
+                <p>{this.props.greeting}</p>
             </div>
         )
     }
