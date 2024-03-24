@@ -5,7 +5,7 @@ import SearchBox from "./SearchBox";
 
 function App() {
     return(
-        <div className="">
+        <div className="tc">
             <h1 className="">Robo Friends</h1>
             <SearchBox />
             <CardList robots={robots}/>
