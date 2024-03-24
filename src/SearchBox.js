@@ -3,7 +3,9 @@ import React from "react";
 
 function SearchBox() {
     return(
-        <input type="search" placeholder="Search robots"/>
+        <div>
+            <input type="search" placeholder="Search robots"/>
+        </div>
     )
 }
 ;
