@@ -1,8 +1,8 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import SearchBox from './SearchBox';
 import CardList from './CardList';
 import { robots } from './robots'; // Assuming you have imported the robots array from a separate file
-import Card from './Card';
+// import Card from './Card';
 
 const App = () => {
 //   const [robots, setRobots] = useState(robots);
