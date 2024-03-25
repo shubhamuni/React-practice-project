@@ -17,10 +17,10 @@ const App = () => {
   });
 
   return (
-    <div className='tc ma4'>
-        <h1 className="">Robo Friends</h1>
+    <div className='tc pa4'>
+        <h1 className="pa5 br4 bg-light-green">Robo Friends</h1>
         <SearchBox searchChange={onSearchChange} />
-        <CardList robots={filteredRobots} />
+        <CardList  robots={filteredRobots} />
     </div>
   );
 };
