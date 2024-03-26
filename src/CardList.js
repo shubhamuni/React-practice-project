@@ -8,7 +8,13 @@ import Card from "./Card";
 // console.log(robots)
 // Destructring happens below { robots } value that we passed in app component (robots={filteredRobots})
 const CardList = ({ robots }) => {
-
+const obj = {
+    a:10,
+    x:function() {
+        console.log(this)
+    }
+}
+obj.x();
     return(
         robots.map((user,i)=>{
             return <Card key={i} name={robots[i].name} id={robots[i].id} email={robots[i].email} />;
