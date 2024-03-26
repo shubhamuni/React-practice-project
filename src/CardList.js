@@ -6,7 +6,7 @@ import Card from "./Card";
 //     return <Card key={user.id} name={user.name} id={user.id} email={user.email} />;
 // })
 // console.log(robots)
-// Destructring happens below { robots }
+// Destructring happens below { robots } value that we passed in app component (robots={filteredRobots})
 export const CardList = ({ robots }) => {
     
     return(
