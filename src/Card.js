@@ -10,6 +10,7 @@ const Card = (props) => {
       <div>
         <h2>{name}</h2>
         <p>{email}</p>
+        <p>Id# {id}</p>
       </div>
     </div>
   )
