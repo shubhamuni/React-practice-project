@@ -16,6 +16,7 @@ const obj = {
     }
 }
 obj.x();
+//when we call this in global scope the result is the whole window object of the browser.
     return(
         robots.map((user,i)=>{
             return <Card key={i} name={robots[i].name} id={robots[i].id} email={robots[i].email} />;
