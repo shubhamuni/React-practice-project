@@ -8,6 +8,7 @@ import Card from "./Card";
 // console.log(robots)
 // Destructring happens below { robots } value that we passed in app component (robots={filteredRobots})
 const CardList = ({ robots }) => {
+    //below is just for explaining this keyword.
 const obj = {
     a:10,
     x:function() {
