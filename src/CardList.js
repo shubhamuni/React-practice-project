@@ -7,6 +7,8 @@ import Card from "./Card";
 // })
 // console.log(robots)
 // Destructring happens below { robots } value that we passed in app component (robots={filteredRobots})
+
+console.log(this); //results undefined because of scrict mode present in parent component.
 const CardList = ({ robots }) => {
     //below is just for explaining this keyword.
 const obj = {
@@ -17,7 +19,7 @@ const obj = {
 }
 obj.x();
 //when we call this in global scope the result is the whole window object of the browser.
-console.log(this);
+
     return(
         robots.map((user,i)=>{
             return <Card key={i} name={robots[i].name} id={robots[i].id} email={robots[i].email} />;
