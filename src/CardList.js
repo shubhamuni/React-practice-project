@@ -6,7 +6,7 @@ import Card from "./Card";
 //     return <Card key={user.id} name={user.name} id={user.id} email={user.email} />;
 // })
 // console.log(robots)
-
+// Destructring happens below { robots }
 export const CardList = ({ robots }) => {
     
     return(
