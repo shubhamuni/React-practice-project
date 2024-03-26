@@ -15,7 +15,7 @@ const App = () => {
   const filteredRobots = robots.filter((robot) => {
     return robot.name.toLowerCase().includes(searchfield.toLowerCase());
   });
-  console.log(filteredRobots)
+  // console.log(filteredRobots)
   
   return (
     <div className='tc pa4'>
