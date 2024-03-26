@@ -9,7 +9,7 @@ export const CardList = ({ robots }) => {
     // })
     // console.log(robots)
     return(
-        robots.map((user,i)=>{
+        robots.map((i)=>{
             return <Card key={i} name={robots[i].name} id={robots[i].id} email={robots[i].email} />;
         })    
     );
