@@ -10,7 +10,7 @@ function AppFunction () {
       }
       y();
     },
-  }
+  };
   obj.x();
   return(
     <p>Checking code</p>
