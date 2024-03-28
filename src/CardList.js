@@ -1,14 +1,6 @@
 import React from "react";
 import Card from "./Card";
 
-//map also same for below code 
-// const cardArray = props.robots.map((user)=>{
-//     return <Card key={user.id} name={user.name} id={user.id} email={user.email} />;
-// })
-// console.log(robots)
-// Destructring happens below { robots } value that we passed in app component (robots={filteredRobots})
-
-// console.log(this); //results undefined because of scrict mode present in parent component.
 const CardList = ({ robot }) => {
     return(
         robot.map((user,i)=>{
@@ -18,13 +10,3 @@ const CardList = ({ robot }) => {
 }
 
 export default CardList;
-
-    //below is just for explaining this keyword.
-    // const obj = {
-    //     a:10,
-    //     x:function() {
-    //         console.log(this.a)
-    //     }
-    // }
-    // obj.x();
-    //when we call this in global scope the result is the whole window object of the browser.
