@@ -6,7 +6,10 @@ function AppFunction () {
     a:10,
     x: () => {
       const y = () =>{
-        console.log(this);
+        const z =() => {
+          console.log(this);
+        }
+        z();
       }
       y();
     },
