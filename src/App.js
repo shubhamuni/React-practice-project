@@ -23,7 +23,7 @@ const App = () => {
         <h1 className="pa5 br4 bg-dark-green">Robo Friends</h1>
         <SearchBox searchChange={onSearchChange} />
         <CardList  robots={filteredRobots} />
-        <AppFunction/>
+        {/* <AppFunction/> */}
     </div>
   );
 };
