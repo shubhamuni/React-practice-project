@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import SearchBox from './SearchBox';
 import CardList from './CardList';
 import { robots } from './robots'; // Assuming you have imported the robots array from a separate file
-import AppFunction from './AppFunction';
 // import Card from './Card';
 
 const App = () => {
@@ -23,7 +22,6 @@ const App = () => {
         <h1 className="pa5 br4 bg-dark-green">Robo Friends</h1>
         <SearchBox searchChange={onSearchChange} />
         <CardList  robot={filteredRobots} />
-        <AppFunction value={filteredRobots}/>
     </div>
   );
 };
