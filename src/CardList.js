@@ -9,10 +9,10 @@ import Card from "./Card";
 // Destructring happens below { robots } value that we passed in app component (robots={filteredRobots})
 
 // console.log(this); //results undefined because of scrict mode present in parent component.
-const CardList = ({ robots }) => {
+const CardList = ({ robot }) => {
     return(
-        robots.map((user,i)=>{
-            return <Card key={i} name={robots[i].name} id={robots[i].id} email={robots[i].email} />;
+        robot.map((user,i)=>{
+            return <Card key={i} name={robot[i].name} id={robot[i].id} email={robot[i].email} />;
         })    
     );
 }
