@@ -1,15 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
 
-class AppFunction extends Component {
-    constructor(props) {
-      super(props);
-      this.clickFunction = this.clickFunction.bind(this);
-    }  clickFunction() {
-      console.log(this.props.value);
-    }  render() {
-      return(
-        <div onClick={this.clickFunction}>Click Me!</div>
-      );
+
+function AppFunction () {
+  const obj = {
+    a:10,
+    x: () => {
+      const y = () =>{
+        console.log(this)
+      }
+      y();
     }
   }
-  export default AppFunction;
+  obj.x();
+  return(
+    <p>Checking code</p>
+  )
+}
+
+export default AppFunction
