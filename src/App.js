@@ -1,13 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import SearchBox from './SearchBox';
 import CardList from './CardList';
-import AppFunction from './AppFunction';
 // import { robots } from './robots'; // Assuming you have imported the robots array from a separate file
 // import Card from './Card';
 
 const App = () => {
   const [robots, setRobots] = useState([]);
   const [searchfield, setSearchfield] = useState('');
+  const obj = {
+    a:10,
+    x: () => {
+      const y = () =>{
+        console.log(this);
+      }
+      y();
+    },
+  };
+  obj.x();
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users').then(Response => Response.json()).then(users => setRobots(users) )
@@ -26,7 +35,7 @@ const App = () => {
         <h1 className="pa5 br4 bg-light-green">Robo Friends</h1>
         <SearchBox searchChange={onSearchChange} />
         <CardList  robot={filteredRobots} />
-        <AppFunction/>
+        
     </div>
   );
 };
