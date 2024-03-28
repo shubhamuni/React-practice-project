@@ -6,10 +6,10 @@ function AppFunction () {
     a:10,
     x: () => {
       const y = () =>{
-        console.log(this)
+        console.log(this);
       }
       y();
-    }
+    },
   }
   obj.x();
   return(
@@ -17,4 +17,4 @@ function AppFunction () {
   )
 }
 
-export default AppFunction
+export default AppFunction;
