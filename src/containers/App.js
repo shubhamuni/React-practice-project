@@ -3,6 +3,7 @@ import SearchBox from '../components/SearchBox';
 import CardList from '../components/CardList';
 import "./App.css"
 import Scroll from '../components/Scroll';
+import AppFunction from '../AppFunction';
 // import { robots } from './robots'; // Assuming you have imported the robots array from a separate file
 // import Card from './Card';
 
@@ -33,6 +34,7 @@ const App = () => {
       <Scroll>
         <CardList  robot={filteredRobots} />
       </Scroll>
+      <AppFunction/>
     </div>
 };
 
