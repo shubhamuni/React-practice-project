@@ -10,8 +10,7 @@ const Card = (props) => {
       <div>
         <h2>{name}</h2>
         <p>{email}</p>
-        <p>Id# {id}</p>
-        <p>City: {city}</p>
+        <p>Planet: {city}</p>
       </div>
     </div>
   )
