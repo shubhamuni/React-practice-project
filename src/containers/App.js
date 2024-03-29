@@ -11,7 +11,11 @@ const App = () => {
   const [searchfield, setSearchfield] = useState('');
 //in react function we don't use "ComponentDidMount() instead we use useEffect()"
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users').then(Response => Response.json()).then(users => setRobots(users) )
+    fetch('https://jsonplaceholder.typicode.com/users').then(Response => Response.json()).then((users)=>{
+      setTimeout(() => {
+        setRobots(users)
+      }, 1000);
+    } )
   },[])
 
   const onSearchChange = (event) => {
@@ -24,7 +28,7 @@ const App = () => {
   
     if (!robots.length){
       return(
-        <h1 className='bungee-spice-regular tc ma5'>Loading</h1>
+        <h1 className='f1 bungee-spice-regular tc ma6 pa7'>Loading</h1>
       )
     }
     else {
