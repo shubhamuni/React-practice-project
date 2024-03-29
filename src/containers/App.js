@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import SearchBox from './SearchBox';
-import CardList from './CardList';
+import SearchBox from '../SearchBox';
+import CardList from '../components/CardList';
 import './App.css';
-import Scroll from './Scroll';
+import Scroll from '../Scroll';
 // import { robots } from './robots'; // Assuming you have imported the robots array from a separate file
 // import Card from './Card';
 
