@@ -9,7 +9,7 @@ const Card = (props) => {
       <div>
         <h2>{name}</h2>
         <p>{email}</p>
-        <p>{id}</p>
+        <p>Shubham Chaudhari</p>
         <p>Planet: {city}</p>
       </div>
     </div>
