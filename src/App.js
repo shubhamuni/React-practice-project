@@ -7,16 +7,6 @@ import CardList from './CardList';
 const App = () => {
   const [robots, setRobots] = useState([]);
   const [searchfield, setSearchfield] = useState('');
-  const obj = {
-    a:10,
-    x: () => {
-      const y = () =>{
-        console.log(this);
-      }
-      y();
-    },
-  };
-  obj.x();
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users').then(Response => Response.json()).then(users => setRobots(users) )
