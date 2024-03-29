@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SearchBox from './SearchBox';
 import CardList from './CardList';
 import './App.css';
+import Scroll from './Scroll';
 // import { robots } from './robots'; // Assuming you have imported the robots array from a separate file
 // import Card from './Card';
 
@@ -25,8 +26,9 @@ const App = () => {
     <div className='tc pa4'>
         <h1 className="f1  pa5 br4 bg-light-green bungee-spice-regular">Robo friends</h1>
         <SearchBox searchChange={onSearchChange} />
-        <CardList  robot={filteredRobots} />
-        
+        <Scroll>
+          <CardList  robot={filteredRobots} />
+        </Scroll>
     </div>
   );
 };
