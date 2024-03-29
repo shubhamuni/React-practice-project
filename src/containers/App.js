@@ -22,15 +22,22 @@ const App = () => {
   });
   // console.log(filteredRobots)
   
-  return (
-    <div className='tc pa4'>
+    if (!robots.length){
+      return(
+        <h1 className='bungee-spice-regular tc ma5'>Loading</h1>
+      )
+    }
+    else {
+      return(
+        <div className='tc pa4'>
         <h1 className="f1  pa5 br4 bg-light-green bungee-spice-regular">Robo friends</h1>
         <SearchBox searchChange={onSearchChange} />
         <Scroll>
           <CardList  robot={filteredRobots} />
         </Scroll>
     </div>
-  );
+      )
+    }
 };
 
 export default App;
