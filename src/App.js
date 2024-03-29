@@ -7,7 +7,7 @@ import CardList from './CardList';
 const App = () => {
   const [robots, setRobots] = useState([]);
   const [searchfield, setSearchfield] = useState('');
-
+//in react function we don't use "ComponentDidMount() instead we use useEffect()"
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users').then(Response => Response.json()).then(users => setRobots(users) )
   },[])
