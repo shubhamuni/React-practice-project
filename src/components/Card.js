@@ -1,5 +1,4 @@
-// import Text from './Text'
-import './App.css';
+
 import React from 'react';
 
 const Card = (props) => {
