@@ -27,8 +27,7 @@ const App = () => {
   // console.log(filteredRobots)
   
   return !robots.length ? <h1 className='f1 bungee-spice-regular tc ma6 pa7'>Loading</h1>
-    :
-    <div className='tc pa4'>
+  : <div className='tc pa4'>
       <h1 className="f1  pa5 br4 bg-light-green bungee-spice-regular">Robo friends</h1>
       <SearchBox searchChange={onSearchChange} />
       <Scroll>
