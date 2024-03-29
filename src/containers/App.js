@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import SearchBox from '../SearchBox';
+import SearchBox from '../components/SearchBox';
 import CardList from '../components/CardList';
 import './App.css';
 import Scroll from '../Scroll';
