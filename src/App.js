@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SearchBox from './SearchBox';
 import CardList from './CardList';
+import './App.css';
 // import { robots } from './robots'; // Assuming you have imported the robots array from a separate file
 // import Card from './Card';
 
@@ -22,7 +23,7 @@ const App = () => {
   
   return (
     <div className='tc pa4'>
-        <h1 className="f1 pa5 br4 bg-light-green">Robo Friends</h1>
+        <h1 className="f1 pa5 br4 bg-light-green bungee-spice-regular">Robo friends</h1>
         <SearchBox searchChange={onSearchChange} />
         <CardList  robot={filteredRobots} />
         
