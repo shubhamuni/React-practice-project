@@ -18,6 +18,7 @@ function AppFunction () {
     lastName: "Sathye"
   }
   fullName.call(object1,"Malegaon","From call of maharashtra")
+  fullName.apply(object1,["Malegaon,","Maharashtra"])
   return(
     <div>
       <p>Checking code</p>
