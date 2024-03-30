@@ -21,9 +21,13 @@ function AppFunction () {
   fullName.apply(object1,["Malegaon,","Maharashtra"])
   return(
     <div>
-      <p>Checking code</p>
+      <fieldset>
+        <legend aria-required>Account type (required)</legend>
+        <label for="personal-account"><input for="personal-account" id="personal-account" type="radio" name="account-type" checked /> Personal</label>
+        <label for="business-account"><input for="business-account" id="business-account" type="radio" name="account-type" /> Business</label>
+      </fieldset>
     </div>
-  )
+  ) 
 }
 
 export default AppFunction;
