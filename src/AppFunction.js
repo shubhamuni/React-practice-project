@@ -7,12 +7,17 @@ function AppFunction () {
     lastName: "Patil"
   }
   const fullName = function (city,state) {
-    console.log(this.name + " " + this.lastName + " " + city +" from " + state)
+    console.log(this.name + " " + this.lastName + " from " + city+ " " + state)
   }
   fullName.call(object,"Pune","Maharashtra");
   fullName.apply(object,["Pune","Maharashtra"])
   const printMe = fullName.bind(object,"Pune","Maharashtra")
   printMe()
+  const object1 = {
+    name:"Pratik",
+    lastName: "Sathye"
+  }
+  fullName.apply(object1,["Malegaon,","Maharashtra"])
   return(
     <div>
       <p>Checking code</p>
