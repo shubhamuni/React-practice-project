@@ -93,5 +93,7 @@ img {
   }
   .first-paragraph::first-letter {
     font-size:6rem;
+    margin-right:1rem;
+    float:left;
     color:orangered;
   }
