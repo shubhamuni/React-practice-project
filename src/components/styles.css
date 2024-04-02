@@ -48,6 +48,7 @@ img {
 }
 .text {
     grid-column: 2 / 3;
+    text-align:justify;
     font-size: 1.8rem;
     letter-spacing: 0.6px;
     column-width: 25rem;
@@ -89,4 +90,8 @@ img {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
     align-items: center;
+  }
+  .first-paragraph::first-letter {
+    font-size:6rem;
+    color:orangered;
   }
