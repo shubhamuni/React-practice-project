@@ -119,3 +119,13 @@ img {
     grid-template-columns:1fr 2fr;
     column-gap:3rem;
   }
+  .lists {
+    margin-top: 2rem;
+    list-style-type: none;
+  }
+  .lists li {
+    margin-bottom: 1.5rem;
+  }
+  .list-title, .list-subtitle {
+    color:#00beef;
+  }
