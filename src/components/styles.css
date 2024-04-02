@@ -100,3 +100,9 @@ img {
   hr {
     margin:1.5rem 0;
   }
+  .quote {
+    color: #00beef;
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  
