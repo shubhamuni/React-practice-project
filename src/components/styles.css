@@ -97,3 +97,6 @@ img {
     float:left;
     color:orangered;
   }
+  hr {
+    margin:1.5rem 0;
+  }
