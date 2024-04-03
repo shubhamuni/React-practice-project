@@ -1,4 +1,5 @@
 import React from "react";
+import Freecodecamp from "./components/Freecodecamp";
 
 
 function AppFunction () {
@@ -21,7 +22,7 @@ function AppFunction () {
   fullName.apply(object1,["Malegaon,","Maharashtra"])
   return(
     <div>
-      <p>Checking code</p>
+    <Freecodecamp/>
     </div>
   )
 }
