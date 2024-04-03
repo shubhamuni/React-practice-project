@@ -58,6 +58,14 @@ body {
     );
     border-radius: 80% 80% 100% 100%;
   }
+  .penguin-body::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 45%;
+    background-color: gray;
+  
+  }
   .sun {
     width:200px;
     height:200px;
