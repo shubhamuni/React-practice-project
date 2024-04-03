@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.css"
 
-function Freecodecamp() {
-    return(
-    <main>
+function Freecodecamp () {
+    return (
+        <div>
         <section className="heading">
             <header className="hero">
             <img
@@ -19,13 +19,10 @@ function Freecodecamp() {
             </p>
             </header>
             <div className="author">
-            <p className="author-name">
-                By
-                <a href="https://freecodecamp.org" target="_blank" rel="noreferrer"
-                >freeCodeCamp</a
-                >
-            </p>
-            <p className="publish-date">March 7, 2019</p>
+                <p className="author-name">By
+                    <a href="https://freecodecamp.org" target="_blank" rel="noreferrer"
+                    >freeCodeCamp</a></p>
+                <p className="publish-date">March 7, 2019</p>
             </div>
             <div className="social-icons">
             <a href="https://www.facebook.com/freecodecamp/">
@@ -156,7 +153,7 @@ function Freecodecamp() {
             />
             </aside>
         </section>
-    </main>
+    </div>
     )
 };
 
