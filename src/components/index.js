@@ -40,5 +40,5 @@ let userData = {
   songCurrentTime: 0
 }
 const renderSongs = (array) => {
-  const songsHTML = array.map();
+  const songsHTML = array.map(); 
 }
