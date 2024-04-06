@@ -31,3 +31,11 @@ const allSongs = [
   
   }
 ]
+const audio = new Audio();
+// Start by using the let keyword to declare a new variable called userData and assign it an empty object.
+
+let userData = {
+  songs: [...allSongs],
+  currentSong: null,
+  songCurrentTime: 0
+}
