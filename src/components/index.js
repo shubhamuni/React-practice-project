@@ -107,4 +107,5 @@ const renderSongs = (array) => {
 
   playlistSongs.innerHTML = songsHTML;
 };
+//Optional chaining
 renderSongs(userData?.songs)
