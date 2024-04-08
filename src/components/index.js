@@ -13,7 +13,7 @@ currentDateParagraph.textContent=formattedDate;
 
 dateOptionsSelectElement.addEventListener("change", () => {
   switch (dateOptionsSelectElement.value){
-    default case "yyyy-mm-dd" :
+     case "yyyy-mm-dd" :
     currentDateParagraph.textContent = formattedDate.split("-").reverse().join("-")
     break;
     case "mm-dd-yyyy-h-mm":
