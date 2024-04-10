@@ -193,5 +193,5 @@ playerCards.innerHTML += arr.map(({ name, position, number, isCaptain, nickname 
 
 
 playersDropdownList.addEventListener('change', (e) => {
-  console.log(e.target.value)
+  playerCards.innerHTML = "";
 });
