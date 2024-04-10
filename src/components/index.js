@@ -188,3 +188,6 @@ playerCards.innerHTML += arr.map(({ name, position, number, isCaptain, nickname 
   </div>
 }).join("");
 //To remove the commas between each player-card so it does not show up on screen, chain the .join() method to the .map() method. Pass an empty string as the argument for the .join() method.
+
+playersDropdownList.addEventListener('change', () => {
+});
