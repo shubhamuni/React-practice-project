@@ -7,6 +7,12 @@ const decimalToBinary = (input) => {
   const quotients = [];
   const remainders = []
 };
+while(input > 0){
+  input = 0;
+  const quotient =Math.floor(input / 2);
+}
+
+
 
 const checkUserInput = () => {
   if (!numberInput.value || isNaN(parseInt(numberInput.value))) {
