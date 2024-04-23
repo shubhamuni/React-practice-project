@@ -2,13 +2,12 @@ const character = "#";
 const count = 8;
 const rows = [];
 
-function padRow(name) {
+function padRow() {
     const test = "Testing";
     return test;
-  
-}
-const call = padRow("shubham");
-console.log(call);
+  }
+  const call = padRow();
+  console.log(call);
 
 
 for (let i = 0; i < count; i = i + 1) {
