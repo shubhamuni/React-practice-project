@@ -12,3 +12,6 @@ for (const row of rows) {
 }
 
 console.log(result);
+function padRow() {}
+
+const call = padRow();
