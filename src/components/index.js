@@ -11,5 +11,6 @@ const minutes = date.getMinutes();
 const formattedDate = `${day}-${month}-${year}`;
 currentDateParagraph.textContent = formattedDate;
 
+// below code is for practice purpose
 const exampleSentence = "selur pmaCedoCeerf".split("").reverse().join("");
 console.log(exampleSentence);
