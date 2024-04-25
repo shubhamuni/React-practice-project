@@ -102,6 +102,8 @@ products.forEach(
 );
 
 class ShoppingCart {
-            
+  constructor() {
+    
+  }
 }
         const myShoppingCart = new ShoppingCart();
