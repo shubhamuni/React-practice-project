@@ -46,9 +46,29 @@ class Player {
       this.velocity.y = 0;
     }
 
+    if (this.position.x < this.width) {
+      this.position.x = this.width;
+    }
 
-
-
+    if (this.position.x >= canvas.width - 2 * this.width) {
+      this.position.x = canvas.width - 2 * this.width;
+    }
   }
-
 }
+
+const player = new Player();
+
+
+const animate = () => {
+  requestAnimationFrame(animate);
+  ctx.clearRect(0,0,canvas.width,canvas.height)
+}
+
+
+const startGame = () => {
+  canvas.style.display = "block";
+  startScreen.style.display = "none";
+  player.draw();
+}
+
+startBtn.addEventListener("click", startGame);
