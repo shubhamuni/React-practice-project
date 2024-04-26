@@ -1,3 +1,4 @@
+//Learn intermidiate OOP bt building a platformer gamer
 const startBtn = document.getElementById("start-btn");
 const canvas = document.getElementById("canvas");
 const startScreen = document.querySelector(".start-screen");
