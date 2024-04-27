@@ -121,7 +121,9 @@ const checkpointPositions = [
   { x: 4800, y: proportionalSize(80), z: 3 },
 ];
 
-const checkpoints = checkpointPositions.map((checkpoint)=> new CheckPoint(checkpoint.x, checkpoint.y, checkpoint.z))
+const checkpoints = checkpointPositions.map(
+  (checkpoint) => new CheckPoint(checkpoint.x, checkpoint.y, checkpoint.z)
+);
 
 const animate = () => {
   requestAnimationFrame(animate);
@@ -129,6 +131,10 @@ const animate = () => {
 
   platforms.forEach((platform) => {
     platform.draw();
+  });
+
+  checkpoints.forEach(checkpoint => {
+    checkpoint.draw();
   });
 
   player.update();
@@ -144,9 +150,18 @@ const animate = () => {
       platforms.forEach((platform) => {
         platform.position.x -= 5;
       });
+
+      checkpoints.forEach((checkpoint) => {
+        checkpoint.position.x -= 5;
+      });
+    
     } else if (keys.leftKey.pressed && isCheckpointCollisionDetectionActive) {
       platforms.forEach((platform) => {
         platform.position.x += 5;
+      });
+
+      checkpoints.forEach((checkpoint) => {
+        checkpoint.position.x += 5;
       });
     }
   }
@@ -224,6 +239,13 @@ const startGame = () => {
   startScreen.style.display = "none";
   animate();
 }
+
+
+const showCheckpointScreen = (msg) => {
+  checkpointScreen.style.display = "block";
+
+};
+
 
 startBtn.addEventListener("click", startGame);
 
