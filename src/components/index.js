@@ -194,7 +194,16 @@ const animate = () => {
     };
   });
 
-checkpoints.forEach((checkpoint, index, checkpoints)=> {})
+
+  checkpoints.forEach((checkpoint, index, checkpoints) => {
+    const checkpointDetectionRules =[
+      player.position.x >= checkpoint.position.x,
+      player.position.y >= checkpoint.position.y,
+      player.position.y + player.height <= checkpoint.position.y + checkpoint.height,
+      isCheckpointCollisionDetectionActive
+    ]
+  });
+
 }
 
 
