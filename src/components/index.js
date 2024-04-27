@@ -30,7 +30,7 @@ class Player {
     ctx.fillStyle = "#99c9ff";
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
-
+  
   update() {
     this.draw();
     this.position.x += this.velocity.x;
@@ -71,18 +71,31 @@ class Platform {
   }
 }
 
-const player = new Player();
 class CheckPoint {
   constructor(x, y, z) {
     this.position = {
       x,
-      y
-    }
+      y,
+    };
+    this.width = proportionalSize(40);
+    this.height = proportionalSize(70);
+    this.claimed = false;
   };
-  this.width = proportionalSize(40);
-  this.height = proportionalSize(70);
+
+  draw() {
+    ctx.fillStyle = "#f1be32";
+    ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
+  }
+  claim() {
+    this.width = 0;
+    this.height = 0;
+    this.position.y = Infinity;
+    this.claimed = true;
+  }
 };
 
+
+const player = new Player();
 
 const platformPositions = [
   { x: 500, y: proportionalSize(450) },
@@ -102,6 +115,8 @@ const platformPositions = [
 const platforms = platformPositions.map(
   (platform) => new Platform(platform.x, platform.y)
 );
+
+
 
 const animate = () => {
   requestAnimationFrame(animate);
@@ -145,13 +160,12 @@ const animate = () => {
       return;
     }
 
-
     const platformDetectionRules = [
       player.position.x >= platform.position.x - player.width / 2,
       player.position.x <=
         platform.position.x + platform.width - player.width / 3,
       player.position.y + player.height >= platform.position.y,
-      player.position.y <= platform.position.y + platform.height
+      player.position.y <= platform.position.y + platform.height,
     ];
 
     if (platformDetectionRules.every(rule => rule)) {
@@ -159,7 +173,6 @@ const animate = () => {
       player.velocity.y = gravity;
     };
   });
-
 }
 
 
@@ -206,6 +219,7 @@ const startGame = () => {
   startScreen.style.display = "none";
   animate();
 }
+
 
 startBtn.addEventListener("click", startGame);
 
