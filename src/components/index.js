@@ -1,24 +1,17 @@
-const messageInput = document.getElementById("message-input");
-const result = document.getElementById("result");
-const checkMessageButton = document.getElementById("check-message-btn");
+const sortButton = document.getElementById("sort");
 
-const helpRegex = /please help|assist me/i;
-const dollarRegex = /[0-9]+ (?:hundred|thousand|million|billion)? dollars/i;
-const freeRegex = /(?:^|\s)fr[e3][e3] m[o0]n[e3]y(?:$|\s)/i;
-const stockRegex = /[s5][t7][o0]ck [a@4]l[e3]r[t7]/i;
+const sortInputArray = (event) => {
+  event.preventDefault();
 
-const denyList = [helpRegex, dollarRegex, freeRegex, stockRegex];
+  const inputValues = [
+    ...document.getElementsByClassName("values-dropdown")
+  ].map((dropdown) => Number(dropdown.value));
+}
 
-const isSpam = (msg) => denyList.some((regex) => regex.test(msg));
+const updateUI = (array = []) => {
+  array.forEach((num, i) => {
 
-checkMessageButton.addEventListener("click", () => {
-  if (messageInput.value === "") {
-    alert("Please enter a message.");
-    return;
-  }
+  })
+}
 
-  result.textContent = isSpam(messageInput.value)
-    ? "Oh no! This looks like a spam message."
-    : "This message does not seem to contain any spam.";
-  messageInput.value = "";
-});
+sortButton.addEventListener("click", sortInputArray);
