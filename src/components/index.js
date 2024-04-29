@@ -42,7 +42,10 @@ const updateRadioOption = (optionNode, score) => {
 };
 
 const updateScore = (selectedValue, achieved) => {
-  
+  totalScore += parseInt(selectedValue);
+  totalScoreText.textContent = totalScore;
+
+  scoreHistory.innerHTML += `<li>${achieved} : ${selectedValue}</li>`;
 };
 
 const getHighestDuplicates = (arr) => {
@@ -114,4 +117,8 @@ rulesBtn.addEventListener("click", () => {
     rulesBtn.textContent = "Show Rules";
     rulesContainer.style.display = "none";
   }
+});
+
+keepScoreBtn.addEventListener("click", () => {
+
 });
