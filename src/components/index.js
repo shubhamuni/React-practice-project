@@ -84,6 +84,28 @@ const getHighestDuplicates = (arr) => {
   updateRadioOption(5, 0);
 };
 
+const detectFullHouse = (arr) => {
+  const counts = {};
+
+  for (const num of arr) {
+    counts[num] = counts[num] ? counts[num] + 1 : 1;
+  }
+
+  const hasThreeOfAKind = Object.values(counts).includes(3);
+  const hasPair = Object.values(counts).includes(2);
+
+  if (hasThreeOfAKind && hasPair) {
+    updateRadioOption(2, 25);
+  }
+
+  updateRadioOption(5, 0);
+};
+
+const checkForStraights = (arr) => {
+  const sortedNumbersArr = arr.sort((a, b) => a - b);
+
+};
+
 const resetRadioOption = () => {
   scoreInputs.forEach((input) => {
     input.disabled = true;
@@ -101,7 +123,18 @@ const resetGame = () => {
   totalScore = 0;
   round = 1;
   rolls = 0;
-listOfAllDice.forEach((dice,index)=>{})
+
+  listOfAllDice.forEach((dice, index) => {
+    dice.textContent = diceValuesArr[index];
+  });
+
+  totalScoreText.textContent = totalScore;
+  scoreHistory.innerHTML = "";
+
+  currentRoundRollsText.textContent = rolls;
+  currentRoundText.textContent = round;
+
+  resetRadioOption();
 };
 
 rollDiceBtn.addEventListener("click", () => {
@@ -113,6 +146,7 @@ rollDiceBtn.addEventListener("click", () => {
     rollDice();
     updateStats();
     getHighestDuplicates(diceValuesArr);
+    detectFullHouse(diceValuesArr);
   }
 });
 
@@ -149,6 +183,7 @@ keepScoreBtn.addEventListener("click", () => {
     if (round > 6) {
       setTimeout(() => {
         alert(`Game Over! Your total score is ${totalScore}`);
+        resetGame();
       }, 500);
     }
   } else {
