@@ -110,5 +110,5 @@ const showLatestPosts = (data) => {
       <td>${viewCount(views)}</td>
       <td>${timeAgo(bumped_at)}</td>
     </tr>`;
-  
+  }).join("");
 };
