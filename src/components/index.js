@@ -1,24 +1,29 @@
+
 class MyComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Initial State'
+      text: "Hello"
     };
+    // Binding the handleClick method to the current instance
     this.handleClick = this.handleClick.bind(this);
   }
+
+  // Define the handleClick method to update the state
   handleClick() {
-    // Change code below this line
     this.setState({
-      name: 'React Rocks!'
+      text: 'You clicked!'
     });
-    // Change code above this line
   }
+
   render() {
     return (
       <div>
+        {/* Button with onClick handler calling the handleClick method */}
         <button onClick={this.handleClick}>Click Me</button>
-        <h1>{this.state.name}</h1>
+        {/* Display the current text from state */}
+        <p>{this.state.text}</p>
       </div>
     );
   }
-};
+}
