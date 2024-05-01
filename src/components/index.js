@@ -1,13 +1,17 @@
+import React from 'react';
+
 class MyComponent extends React.Component {
   constructor(props) {
     super(props);
   }
-  componentWillMount() {
-    // Change code below this line
 
-    // Change code above this line
+  componentWillMount() {
+    console.log('Component is about to be mounted to the DOM.');
   }
+
   render() {
-    return <div />
+    return <div />;
   }
-};
+}
+
+export default MyComponent;
