@@ -1,34 +1,44 @@
-class MyComponent extends React.Component {
+class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      visibility: false
+      count: 0
     };
-    // Bind the method to the class
-    this.toggleVisibility = this.toggleVisibility.bind(this);
+    // Bind the methods to the class
+    this.increment = this.increment.bind(this);
+    this.decrement = this.decrement.bind(this);
+    this.reset = this.reset.bind(this);
   }
 
-  // Method to toggle visibility
-  toggleVisibility() {
+  // Method to increment count
+  increment() {
     this.setState(prevState => ({
-      visibility: !prevState.visibility
+      count: prevState.count + 1
     }));
   }
 
+  // Method to decrement count
+  decrement() {
+    this.setState(prevState => ({
+      count: prevState.count - 1
+    }));
+  }
+
+  // Method to reset count to 0
+  reset() {
+    this.setState({
+      count: 0
+    });
+  }
+
   render() {
-    if (this.state.visibility) {
-      return (
-        <div>
-          <button onClick={this.toggleVisibility}>Click Me</button>
-          <h1>Now you see me!</h1>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <button onClick={this.toggleVisibility}>Click Me</button>
-        </div>
-      );
-    }
+    return (
+      <div>
+        <button className='inc' onClick={this.increment}>Increment!</button>
+        <button className='dec' onClick={this.decrement}>Decrement!</button>
+        <button className='reset' onClick={this.reset}>Reset</button>
+        <h1>Current Count: {this.state.count}</h1>
+      </div>
+    );
   }
 }
