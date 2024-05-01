@@ -1,29 +1,30 @@
-
 class MyComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: "Hello"
+      visibility: false
     };
-    // Binding the handleClick method to the current instance
-    this.handleClick = this.handleClick.bind(this);
-  }
+    // Change code below this line
 
-  // Define the handleClick method to update the state
-  handleClick() {
-    this.setState({
-      text: 'You clicked!'
-    });
+    // Change code above this line
   }
+  // Change code below this line
 
+  // Change code above this line
   render() {
-    return (
-      <div>
-        {/* Button with onClick handler calling the handleClick method */}
-        <button onClick={this.handleClick}>Click Me</button>
-        {/* Display the current text from state */}
-        <p>{this.state.text}</p>
-      </div>
-    );
+    if (this.state.visibility) {
+      return (
+        <div>
+          <button onClick={this.toggleVisibility}>Click Me</button>
+          <h1>Now you see me!</h1>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <button onClick={this.toggleVisibility}>Click Me</button>
+        </div>
+      );
+    }
   }
 }
