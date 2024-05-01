@@ -1,22 +1,17 @@
-class CampSite extends React.Component {
+class MyComponent extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      name: 'freeCodeCamp'
+    }
   }
   render() {
     return (
       <div>
-        <Camper/>
+        { /* Change code below this line */ }
+        <h1>{this.state.name}</h1>
+        { /* Change code above this line */ }
       </div>
     );
   }
-};
-// Change code below this line
-const Camper = props => <p>{props.name}</p>;
-
-Camper.defaultProps = {
-  name: "CamperBot"
-};
-
-Camper.propTypes = {
-  name: PropTypes.string.isRequired
 };
