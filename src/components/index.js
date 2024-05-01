@@ -1,48 +1,40 @@
-class OnlyEvens extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+import React from 'react';
 
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log('Should I update?');
-    // Check if the value of the new props is even
-    if (nextProps.value % 2 === 0) {
-      return true; // Update if the value is even
-    } else {
-      return false; // Do not update if the value is odd
-    }
-  }
-
-  componentDidUpdate() {
-    console.log('Component re-rendered.');
-  }
-
-  render() {
-    return <h1>{this.props.value}</h1>;
-  }
-}
-
-class Controller extends React.Component {
+class GateKeeper extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 0
+      input: ''
     };
-    this.addValue = this.addValue.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  addValue() {
-    this.setState(state => ({
-      value: state.value + 1
-    }));
+  handleChange(event) {
+    this.setState({ input: event.target.value });
   }
 
   render() {
+    let inputStyle = {
+      border: '1px solid black'
+    };
+
+    // Conditionally update inputStyle based on input length
+    if (this.state.input.length > 15) {
+      inputStyle.border = '3px solid red';
+    }
+
     return (
       <div>
-        <button onClick={this.addValue}>Add</button>
-        <OnlyEvens value={this.state.value} />
+        <h3>Don't Type Too Much:</h3>
+        <input
+          type="text"
+          style={inputStyle}
+          value={this.state.input}
+          onChange={this.handleChange}
+        />
       </div>
     );
   }
 }
+
+export default GateKeeper;
