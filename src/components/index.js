@@ -1,6 +1,3 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
 class CampSite extends React.Component {
   constructor(props) {
     super(props);
@@ -8,29 +5,18 @@ class CampSite extends React.Component {
   render() {
     return (
       <div>
-        <Camper />
+        <Camper/>
       </div>
     );
   }
 };
+// Change code below this line
+const Camper = props => <p>{props.name}</p>;
 
-class Camper extends React.Component {
-  render() {
-    return (
-      <div>
-        <p>{this.props.name}</p>
-      </div>
-    );
-  }
-}
-
-// Assign default props to Camper component
 Camper.defaultProps = {
-  name: 'CamperBot'
+  name: "CamperBot"
 };
 
-// Define propTypes for Camper component
 Camper.propTypes = {
   name: PropTypes.string.isRequired
 };
-
