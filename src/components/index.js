@@ -1,35 +1,48 @@
-class MyComponent extends React.Component {
+class OnlyEvens extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('Should I update?');
+    // Check if the value of the new props is even
+    if (nextProps.value % 2 === 0) {
+      return true; // Update if the value is even
+    } else {
+      return false; // Do not update if the value is odd
+    }
+  }
+
+  componentDidUpdate() {
+    console.log('Component re-rendered.');
+  }
+
+  render() {
+    return <h1>{this.props.value}</h1>;
+  }
+}
+
+class Controller extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      message: ''
+      value: 0
     };
-    this.handleEnter = this.handleEnter.bind(this);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
+    this.addValue = this.addValue.bind(this);
   }
-  // Change code below this line
-  componentDidMount() {
-    document.addEventListener("keydown",this.handleKeyPress('event', 'callback'))
-  }
-  componentWillUnmount() {
-    document.removeEventListener("keydown",this.handleKeyPress('event', 'callback'))
-  }
-  // Change code above this line
-  handleEnter() {
-    this.setState((state) => ({
-      message: state.message + 'You pressed the enter key! '
+
+  addValue() {
+    this.setState(state => ({
+      value: state.value + 1
     }));
   }
-  handleKeyPress(event) {
-    if (event.keyCode === 13) {
-      this.handleEnter();
-    }
-  }
+
   render() {
     return (
       <div>
-        <h1>{this.state.message}</h1>
+        <button onClick={this.addValue}>Add</button>
+        <OnlyEvens value={this.state.value} />
       </div>
     );
   }
-};
+}
