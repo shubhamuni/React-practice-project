@@ -1,7 +1,6 @@
-const { type } = require("@testing-library/user-event/dist/type");
 
-const INCREMENT = null; // Define a constant for increment action types
-const DECREMENT = null; // Define a constant for decrement action types
+const INCREMENT = 'INCREMENT'; // Define a constant for increment action types
+const DECREMENT = 'DECREMENT'; // Define a constant for decrement action types
 
 const counterReducer = (state=0,action) => {
     switch(action.type){
