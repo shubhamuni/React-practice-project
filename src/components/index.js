@@ -1,27 +1,10 @@
-const ADD_NOTE = 'ADD_NOTE';
+const INCREMENT = null; // Define a constant for increment action types
+const DECREMENT = null; // Define a constant for decrement action types
 
-const notesReducer = (state = 'Initial State', action) => {
-  switch(action.type) {
-    // Change code below this line
-    case ADD_NOTE :
-      return action.text;
-    // Change code above this line
-    default:
-      return state;
-  }
-};
+const counterReducer = null; // Define the counter reducer which will increment or decrement the state based on the action it receives
 
-const addNoteText = (note) => {
-  // Change code below this line
-  return {
-    type: ADD_NOTE,
-    text: note
-  };
-  // Change code above this line
-};
+const incAction = null; // Define an action creator for incrementing
 
-const store = Redux.createStore(notesReducer);
+const decAction = null; // Define an action creator for decrementing
 
-console.log(store.getState());
-store.dispatch(addNoteText('Hello!'));
-console.log(store.getState());
+const store = null; // Define the Redux store here, passing in your reducers
