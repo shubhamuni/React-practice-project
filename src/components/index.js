@@ -1,10 +1,33 @@
+const { type } = require("@testing-library/user-event/dist/type");
+
 const INCREMENT = null; // Define a constant for increment action types
 const DECREMENT = null; // Define a constant for decrement action types
 
-const counterReducer = null; // Define the counter reducer which will increment or decrement the state based on the action it receives
+const counterReducer = (state=0,action) => {
+    switch(action.type){
+        case INCREMENT:
+            return state +1;
+        case DECREMENT:
+            return state -1;
+        default:
+        return state;
+    }
+} // Define the counter reducer which will increment or decrement the state based on the action it receives
 
-const incAction = null; // Define an action creator for incrementing
+const incAction = () => ({
+    type:INCREMENT
+}) // Define an action creator for incrementing
 
-const decAction = null; // Define an action creator for decrementing
+const decAction = () => ({
+    type:DECREMENT
+} )// Define an action creator for decrementing
 
-const store = null; // Define the Redux store here, passing in your reducers
+const { createStore } = Redux; 
+const store = createStore(counterReducer);
+// Define the Redux store here, passing in your reducers
+StorageEvent.subscribe(()=>{
+    console.log("Current state:", store.getState())
+});
+store.dispatch(incAction());
+store.dispatch(incAction());
+store.dispatch(decAction());
