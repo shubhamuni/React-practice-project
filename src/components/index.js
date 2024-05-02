@@ -4,7 +4,15 @@ const defaultState = {
 
 const reducer = (state = defaultState, action) => {
   // Change code below this line
-  
+  switch (action.type) {
+    case "LOGIN" :
+    return {
+    ...state,
+    login: true
+  };
+    default:
+    return state;
+    }
   // Change code above this line
 };
 
