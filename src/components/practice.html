@@ -3,29 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Incrementing Number and Displaying Coordinates on Click</title>
+<title>Print Number on Click Position</title>
+<style>
+  /* Styling for the number element */
+  .number {
+    position: absolute;
+    background-color: #ccc;
+    padding: 5px;
+    border-radius: 5px;
+  }
+</style>
 </head>
 <body>
 
-<p>Click anywhere on the page to see the incrementing number and the coordinates:</p>
-<p id="clickInfo">Count: 0 | Coordinates: (0, 0)</p>
-
 <script>
-// Select the paragraph element where the number and coordinates will be displayed
-const clickInfoElement = document.getElementById('clickInfo');
-
-// Initialize the counter and coordinates
-let count = 0;
-
-// Function to increment the counter, update the display, and show the coordinates
-function handleClick(event) {
+  var count = 0;
+// Function to create and display the number at the clicked position
+function printNumberOnPosition(event) {
+  // Calculate the coordinates of the click event
+  const x = event.clientX;
+  const y = event.clientY;
   count++;
-  const coordinates = `(${event.clientX}, ${event.clientY})`;
-  clickInfoElement.textContent = `Count: ${count} | Coordinates: ${coordinates}`;
+  // Create a new element for the number
+  const numberElement = document.createElement('div');
+  numberElement.classList.add('number');
+  numberElement.textContent = count; // You can set any number here
+
+  // Position the number element at the clicked coordinates
+  numberElement.style.left = `${x}px`;
+  numberElement.style.top = `${y}px`;
+
+  // Append the number element to the document body
+  document.body.appendChild(numberElement);
 }
 
 // Add event listener to the entire document to detect clicks
-document.addEventListener('click', handleClick);
+document.addEventListener('click', printNumberOnPosition);
 </script>
 
 </body>
