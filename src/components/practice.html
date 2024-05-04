@@ -3,28 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Incrementing Number on Click</title>
+<title>Incrementing Number and Displaying Coordinates on Click</title>
 </head>
 <body>
 
-<p>Click anywhere on the page to see the incrementing number:</p>
-<p id="incrementNumber">0</p>
+<p>Click anywhere on the page to see the incrementing number and the coordinates:</p>
+<p id="clickInfo">Count: 0 | Coordinates: (0, 0)</p>
 
 <script>
-// Select the paragraph element where the number will be displayed
-const incrementNumberElement = document.getElementById('incrementNumber');
+// Select the paragraph element where the number and coordinates will be displayed
+const clickInfoElement = document.getElementById('clickInfo');
 
-// Initialize the counter
+// Initialize the counter and coordinates
 let count = 0;
 
-// Function to increment the counter and update the display
-function incrementNumber() {
+// Function to increment the counter, update the display, and show the coordinates
+function handleClick(event) {
   count++;
-  incrementNumberElement.textContent = count;
+  const coordinates = `(${event.clientX}, ${event.clientY})`;
+  clickInfoElement.textContent = `Count: ${count} | Coordinates: ${coordinates}`;
 }
 
 // Add event listener to the entire document to detect clicks
-document.addEventListener('click', incrementNumber);
+document.addEventListener('click', handleClick);
 </script>
 
 </body>
