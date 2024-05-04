@@ -1,5 +1,4 @@
-const editor = document.getElementById('editor');
-const preview = document.getElementById('preview');
+
 
 // Update preview on input
 editor.addEventListener('input', updatePreview);
