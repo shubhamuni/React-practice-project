@@ -9,6 +9,6 @@ updatePreview();
 
 function updatePreview() {
   const markdown = editor.value;
-  const html = marked(markdown);
+  const html = marked(markdown); 
   preview.innerHTML = html;
 }
