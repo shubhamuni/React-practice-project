@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Markdown Previewer</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Incrementing Number on Click</title>
 </head>
 <body>
-  <header>
-    <h1>Markdown Previewer</h1>
-  </header>
-  <main>
-    <div class="container">
-      <textarea id="editor" placeholder="Enter Markdown here..."></textarea>
-      <div id="preview"></div>
-    </div>
-  </main>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.3/marked.min.js"></script>
-  <script src="script.js"></script>
-  
+
+<p>Click anywhere on the page to see the incrementing number:</p>
+<p id="incrementNumber">0</p>
+
+<script>
+// Select the paragraph element where the number will be displayed
+const incrementNumberElement = document.getElementById('incrementNumber');
+
+// Initialize the counter
+let count = 0;
+
+// Function to increment the counter and update the display
+function incrementNumber() {
+  count++;
+  incrementNumberElement.textContent = count;
+}
+
+// Add event listener to the entire document to detect clicks
+document.addEventListener('click', incrementNumber);
+</script>
+
 </body>
 </html>
