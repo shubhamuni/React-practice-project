@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Print Number on Click Position</title>
-<link rel="stylesheet" href="/src/components/practice.scss">
+<link rel="stylesheet" href="practice.scss">
 <style>
   /* Styling for the number element */
   .number {
@@ -19,32 +19,6 @@
 </head>
 <body>
 
-<script>
-  //Creates counter to increment the number which can be print on DOM
-  var count = 0;
-// Function to create and display the number at the clicked position
-function printNumberOnPosition(event) {
-  // Calculate the coordinates of the click event
-  const x = event.clientX;
-  const y = event.clientY;
-  //Counter is incremented by one
-  count++;
-  // Create a new element for the number
-  const numberElement = document.createElement('div');
-  numberElement.classList.add('number');
-  numberElement.textContent = count; // You can set any number here
-
-  // Position the number element at the clicked coordinates
-  numberElement.style.left = `${x}px`;
-  numberElement.style.top = `${y}px`;
-
-  // Append the number element to the document body
-  document.body.appendChild(numberElement);
-}
-
-// Add event listener to the entire document to detect clicks
-document.addEventListener('click', printNumberOnPosition);
-</script>
-
+<script src="index.js"></script>
 </body>
 </html>
