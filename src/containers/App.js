@@ -4,6 +4,7 @@ import CardList from '../components/CardList';
 import "./App.css"
 import Scroll from '../components/Scroll';
 import AppFunction from '../AppFunction';
+import ErrorBoundry from '../components/ErrorBoundry';
 // import { robots } from './robots'; // Assuming you have imported the robots array from a separate file
 // import Card from './Card';
 
@@ -32,7 +33,9 @@ const App = () => {
       <h1 className="f1  pa5 br4 bg-light-green bungee-spice-regular">Robo friends</h1>
       <SearchBox searchChange={onSearchChange} />
       <Scroll>
-        <CardList  robot={filteredRobots} />
+        <ErrorBoundry>
+          <CardList  robot={filteredRobots} />
+        </ErrorBoundry>
       </Scroll>
       <AppFunction/>
     </div>
