@@ -8,10 +8,11 @@ class ErrorBoundry extends Component {
         }
     }
     render () {
-        return {
-            if(this.state.hasError){
-                return <h1>Oops there is somenthing wrong</h1>
-            }
+        if(this.state.hasError){
+            return <h1>Oops there is somenthing wrong</h1>
         }
+        return this.props.children
     }
 }
+
+export default ErrorBoundry;
