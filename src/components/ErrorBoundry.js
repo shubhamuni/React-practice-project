@@ -4,7 +4,7 @@ class ErrorBoundry extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            hasError: true
+            hasError: false
         }
     }
     //Error boundry for any error in CardList component
