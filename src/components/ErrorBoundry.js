@@ -7,6 +7,7 @@ class ErrorBoundry extends Component {
             hasError: false
         }
     }
+    //Error boundry for any error in CardList component
     render () {
         if(this.state.hasError){
             return <h1>Oops there is somenthing wrong</h1>
