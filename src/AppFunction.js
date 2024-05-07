@@ -12,7 +12,6 @@ function AppFunction () {
   })
   //.catch is used for handling all the errors arises from all .then methods
   promise.then(result => result + ' ?').then(data => console.log(data)).catch(error => console.log(error)).then(result => {
-    throw Error
     return result+" Happened"
   }).catch(()=> console.log("Error in second catch"))
 
