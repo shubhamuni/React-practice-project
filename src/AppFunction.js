@@ -4,11 +4,7 @@ import Freecodecamp from "./components/Freecodecamp";
 
 function AppFunction () {
   const promise = new Promise((resolve, reject) => {
-    if(true){
-      resolve("stuff worked")
-    }else {
-      reject("Oops stuff not worked")
-    }
+    if(true)
   })
   const object = {
     name:"Shubham",
