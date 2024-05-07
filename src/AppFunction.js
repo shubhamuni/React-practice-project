@@ -15,7 +15,7 @@ function AppFunction () {
     throw Error
     return result+" Happened"
   }).catch(()=> console.log("Error in second catch"))
-  
+
   return(
     <div>
     <Freecodecamp/>
