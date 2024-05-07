@@ -13,7 +13,7 @@ const App = () => {
   const [searchfield, setSearchfield] = useState('');
 //in react function we don't use "ComponentDidMount() instead we use useEffect()"
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users').then(Response => Response.json()).then((users)=>{
+    fetch('https://jsonplaceholder.typicode.com/users').then(response => response.json()).then((users)=>{
       setTimeout(() => {
         setRobots(users)
       }, 1000);
