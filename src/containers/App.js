@@ -3,7 +3,7 @@ import SearchBox from '../components/SearchBox';
 import CardList from '../components/CardList';
 import "./App.css"
 import Scroll from '../components/Scroll';
-import AppFunction from "../AppFunction.1";
+import AppFunction from '../AppFunction';
 import ErrorBoundry from '../components/ErrorBoundry';
 // import { robots } from './robots'; // Assuming you have imported the robots array from a separate file
 // import Card from './Card';
