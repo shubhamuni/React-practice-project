@@ -3,7 +3,14 @@ import Freecodecamp from "./components/Freecodecamp";
 
 
 function AppFunction () {
-  const promise = new Promise(fetch("https://jsonplaceholder.typicode.com/users"))
+  const promise = new Promise(resolve, reject) =>{
+    if(true){
+      resolve("stuff worked")
+    }
+    else {
+      reject("Oops stuff not worked")
+    }
+  }
   const object = {
     name:"Shubham",
     lastName: "Patil"
