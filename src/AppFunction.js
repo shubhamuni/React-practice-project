@@ -10,6 +10,7 @@ function AppFunction () {
       reject("Oops there is a problem")
     }
   })
+  //.catch is used for handling all the errors arises from all .then methods
   promise.then(result => result + ' ?').then(data => console.log(data)).catch(error => console.log(error))
   
   return(
