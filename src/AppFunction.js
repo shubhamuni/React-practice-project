@@ -22,10 +22,10 @@ function AppFunction () {
     setTimeout(resolve, 1000,"Kitty")
   })
   const promise3 = new Promise((resolve, reject) =>{
-    setTimeout(resolve, 300,"is there")
+    setTimeout(resolve, 2000,"is there")
   })
   const promise4 = new Promise((resolve, reject) =>{
-    setTimeout(resolve, 300,"any chance that you are looking for")
+    setTimeout(resolve, 5000,"any chance that you are looking for")
   })
   Promise.all([promise,promise1,promise2,promise3,promise4]).then(
     value => console.log(value)
