@@ -9,17 +9,20 @@ function AppFunction () {
   ]
 
   async function fetchFunction() {
-    const resp = await fetch(urls[0]);
-    const data = await resp.json();
-    console.log(data)
+    const [posts, albums, user] = await Promise.all(urls.map((url) => {
+        return fetch(url).then(result => result.json())
+      }))
+      console.log("Posts",posts);
+      console.log("Albums",albums);
+      console.log("User",user);
   }
   fetchFunction()
   // Promise.all(urls.map((url) => {
   //   return fetch(url).then(result => result.json())
   // })).then(data => {
-  //   console.log(data[0]);
-  //   console.log(data[1]);
-  //   console.log(data[2]);
+    // console.log(data[0]);
+    // console.log(data[1]);
+    // console.log(data[2]);
   // }).catch(()=> console.log("Error"))
   /**const promise = new Promise((resolve, reject) => {
     if(true) {
