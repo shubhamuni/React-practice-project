@@ -8,13 +8,18 @@ function AppFunction () {
     "https://jsonplaceholder.typicode.com/users"
   ]
 
-  Promise.all(urls.map(url => {
-    return fetch(url).then(result => result.json())
-  })).then(data => {
-    console.log(data[0]);
-    console.log(data[1]);
-    console.log(data[2]);
-  }).catch(()=> console.log("Error"))
+  async function fetchFunction() {
+    const resp = await fetch(urls[2]);
+    const data = await resp.json();
+    console.log(data)
+  }
+  // Promise.all(urls.map((url) => {
+  //   return fetch(url).then(result => result.json())
+  // })).then(data => {
+  //   console.log(data[0]);
+  //   console.log(data[1]);
+  //   console.log(data[2]);
+  // }).catch(()=> console.log("Error"))
   /**const promise = new Promise((resolve, reject) => {
     if(true) {
       resolve("Stuff worked")
