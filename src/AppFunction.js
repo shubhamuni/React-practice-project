@@ -4,7 +4,7 @@ import Freecodecamp from "./components/Freecodecamp";
 
 function AppFunction () {
   const urls = ["https://jsonplaceholder.typicode.com/posts",
-    "https://jsonplaceholder.typcode.com/albums",
+    "https://jsonplaceholder.typicode.com/albums",
     "https://jsonplaceholder.typicode.com/users"
   ]
 
