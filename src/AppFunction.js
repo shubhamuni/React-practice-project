@@ -14,7 +14,7 @@ function AppFunction () {
     console.log(data[0]);
     console.log(data[1]);
     console.log(data[2]);
-  })
+  }).catch(()=> console.log("Error"))
   // const promise = new Promise((resolve, reject) => {
   //   if(true) {
   //     resolve("Stuff worked")
