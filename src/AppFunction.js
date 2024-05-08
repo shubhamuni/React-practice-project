@@ -15,7 +15,7 @@ function AppFunction () {
     console.log(data[1]);
     console.log(data[2]);
   }).catch(()=> console.log("Error"))
-  const promise = new Promise((resolve, reject) => {
+  /**const promise = new Promise((resolve, reject) => {
     if(true) {
       resolve("Stuff worked")
     } else {
@@ -42,7 +42,7 @@ function AppFunction () {
   })
   Promise.all([promise,promise1,promise2,promise3,promise4]).then(
     value => console.log(value)
-  )
+  )**/
   return(
     <div>
     <Freecodecamp/>
