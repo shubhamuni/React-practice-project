@@ -9,10 +9,11 @@ function AppFunction () {
   ]
 
   async function fetchFunction() {
-    const resp = await fetch(urls[2]);
+    const resp = await fetch(urls[0]);
     const data = await resp.json();
     console.log(data)
   }
+  fetchFunction()
   // Promise.all(urls.map((url) => {
   //   return fetch(url).then(result => result.json())
   // })).then(data => {
