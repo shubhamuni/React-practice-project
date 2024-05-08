@@ -4,17 +4,21 @@ import Freecodecamp from "./components/Freecodecamp";
 
 function AppFunction () {
   const urls = ["https://jsonplaceholder.typicode.com/posts",
-    "https://jsonplaceholder.typicode.com/albums",
+    "https://jsonplaceholder.typcode.com/albums",
     "https://jsonplaceholder.typicode.com/users"
   ]
 
   async function fetchFunction() {
-    const [posts, albums, user] = await Promise.all(urls.map((url) => {
+    try {
+      const [posts, albums, user] = await Promise.all(urls.map((url) => {
         return fetch(url).then(result => result.json())
       }))
       console.log("Posts",posts);
       console.log("Albums",albums);
       console.log("User",user);
+    } catch (error) {
+      console.log("Something went wrong",`${error}`)
+    }
   }
   fetchFunction()
   // Promise.all(urls.map((url) => {
