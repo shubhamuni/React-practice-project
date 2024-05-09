@@ -8,7 +8,7 @@ function AppFunction () {
     "https://jsonplaceholder.typicode.com/users"
   ]
 
-  async function fetchFunction() {
+/*   async function fetchFunction() {
     try {
       const [posts, albums, user] = await Promise.all(urls.map((url) => {
         return fetch(url).then(result => result.json())
@@ -21,6 +21,14 @@ function AppFunction () {
     }
   }
   fetchFunction()
+  */
+const forFetch = async function () {
+  const arrayOfUrls = urls.map((url)=>fetch(url))
+  for await (let request of arrayOfUrls) {
+    const data = await request.json();
+    console.log(data);
+  }
+}
   // Promise.all(urls.map((url) => {
   //   return fetch(url).then(result => result.json())
   // })).then(data => {
