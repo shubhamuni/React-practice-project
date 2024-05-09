@@ -22,13 +22,15 @@ function AppFunction () {
   }
   fetchFunction()
   */
-const forFetch = async function () {
-  const arrayOfUrls = urls.map((url)=>fetch(url))
-  for await (let request of arrayOfUrls) {
-    const data = await request.json();
-    console.log(data);
+  const forFetch = async function () {
+    const arrayOfUrls = urls.map((url)=>fetch(url))
+    for await (let request of arrayOfUrls) {
+      const data = await request.json();
+      console.log(data);
+    }
   }
-}
+  forFetch();
+
   // Promise.all(urls.map((url) => {
   //   return fetch(url).then(result => result.json())
   // })).then(data => {
