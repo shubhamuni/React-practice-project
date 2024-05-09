@@ -17,7 +17,7 @@ function AppFunction () {
       console.log("Albums",albums);
       console.log("User",user);
     } catch (error) {
-      console.log("Something went wrong",`${error}`)
+      console.log("Oops the error is",`${error}`)
     }
   }
   fetchFunction()
