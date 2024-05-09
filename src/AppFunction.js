@@ -22,14 +22,21 @@ function AppFunction () {
   }
   fetchFunction()
   */
-  const forFetch = async function () {
-    const arrayOfUrls = urls.map((url)=>fetch(url))
-    for await (let request of arrayOfUrls) {
-      const data = await request.json();
-      console.log(data);
-    }
-  }
-  forFetch();
+ const promise1 = new Promise((resolve, reject) =>{
+  setTimeout(resolve, 2000)
+ })
+ const promise2 = new Promise((resolve, reject) =>{
+  setTimeout(resolve, 2500)
+ })
+ Promise.all([promise1, promise2]).then(data => console.log(data)).catch(e => console.log("something went wrong", e))
+  // const forFetch = async function () {
+  //   const arrayOfUrls = urls.map((url)=>fetch(url))
+  //   for await (let request of arrayOfUrls) {
+  //     const data = await request.json();
+  //     console.log(data);
+  //   }
+  // }
+  // forFetch();
 
   // Promise.all(urls.map((url) => {
   //   return fetch(url).then(result => result.json())
