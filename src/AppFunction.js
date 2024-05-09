@@ -26,7 +26,7 @@ function AppFunction () {
   setTimeout(resolve, 2000)
  })
  const promise2 = new Promise((resolve, reject) =>{
-  setTimeout(resolve, 2500)
+  setTimeout(reject, 2500)
  })
  Promise.all([promise1, promise2]).then(data => console.log(data)).catch(e => console.log("something went wrong", e))
   // const forFetch = async function () {
