@@ -29,6 +29,8 @@ function AppFunction () {
   setTimeout(reject, 2500)
  })
  Promise.any([promise1, promise2]).then(data => console.log(data)).catch(e => console.log("something went wrong", e))
+
+    let data = fetch("https://technoinfotech.com/email-images/shubhampatil-web-logo.png").then(resp => data = resp)
   // const forFetch = async function () {
   //   const arrayOfUrls = urls.map((url)=>fetch(url))
   //   for await (let request of arrayOfUrls) {
@@ -75,7 +77,7 @@ function AppFunction () {
   )**/
   return(
     <div>
-    <Freecodecamp/>
+    <img src={data} alt="swanand face"/>
     </div>  
   )
 }
