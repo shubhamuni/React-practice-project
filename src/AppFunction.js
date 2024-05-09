@@ -28,7 +28,7 @@ function AppFunction () {
  const promise2 = new Promise((resolve, reject) =>{
   setTimeout(reject, 2500)
  })
- Promise.all([promise1, promise2]).then(data => console.log(data)).catch(e => console.log("something went wrong", e))
+ Promise.allSettled([promise1, promise2]).then(data => console.log(data)).catch(e => console.log("something went wrong", e))
   // const forFetch = async function () {
   //   const arrayOfUrls = urls.map((url)=>fetch(url))
   //   for await (let request of arrayOfUrls) {
