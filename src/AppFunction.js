@@ -77,7 +77,6 @@ function AppFunction () {
   )**/
   return(
     <div>
-    <img src={data} alt="swanand face"/>
     </div>  
   )
 }
