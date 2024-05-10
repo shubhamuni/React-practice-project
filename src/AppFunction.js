@@ -9,19 +9,19 @@ function AppFunction () {
   ]
 
 
-   async function fetchFunction() {
-    try {
-      const [posts, albums, user] = await Promise.all(urls.map((url) => {
-        return fetch(url).then(result => result.json())
-      }))
-      console.log("Posts",posts);
-      console.log("Albums",albums);
-      console.log("User",user);
-    } catch (error) {
-      console.log("Oops the error is",`${error}`)
-    }
-  }
-  fetchFunction()
+  //  async function fetchFunction() {
+  //   try {
+  //     const [posts, albums, user] = await Promise.all(urls.map((url) => {
+  //       return fetch(url).then(result => result.json())
+  //     }))
+  //     console.log("Posts",posts);
+  //     console.log("Albums",albums);
+  //     console.log("User",user);
+  //   } catch (error) {
+  //     console.log("Oops the error is",`${error}`)
+  //   }
+  // }
+  // fetchFunction()
   
 //  const promise1 = new Promise((resolve, reject) =>{
 //   setTimeout(resolve, 2000)
