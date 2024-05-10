@@ -22,13 +22,13 @@ function AppFunction () {
   }
   fetchFunction()
   */
- const promise1 = new Promise((resolve, reject) =>{
-  setTimeout(resolve, 2000)
- })
- const promise2 = new Promise((resolve, reject) =>{
-  setTimeout(reject, 2500)
- })
- Promise.any([promise1, promise2]).then(data => console.log(data)).catch(e => console.log(`"something went wrong" ${e}`))
+//  const promise1 = new Promise((resolve, reject) =>{
+//   setTimeout(resolve, 2000)
+//  })
+//  const promise2 = new Promise((resolve, reject) =>{
+//   setTimeout(reject, 2500)
+//  })
+//  Promise.any([promise1, promise2]).then(data => console.log(data)).catch(e => console.log(`"something went wrong" ${e}`))
 
   // const forFetch = async function () {
   //   const arrayOfUrls = urls.map((url)=>fetch(url))
