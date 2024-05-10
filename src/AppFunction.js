@@ -77,6 +77,7 @@ function AppFunction () {
   )**/
   return(
     <div>
+      <Freecodecamp/>
     </div>  
   )
 }
