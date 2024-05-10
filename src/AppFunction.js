@@ -9,7 +9,7 @@ function AppFunction () {
   ]
 
 
-/*   async function fetchFunction() {
+   async function fetchFunction() {
     try {
       const [posts, albums, user] = await Promise.all(urls.map((url) => {
         return fetch(url).then(result => result.json())
@@ -22,7 +22,7 @@ function AppFunction () {
     }
   }
   fetchFunction()
-  */
+  
 //  const promise1 = new Promise((resolve, reject) =>{
 //   setTimeout(resolve, 2000)
 //  })
