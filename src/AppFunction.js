@@ -8,6 +8,38 @@ function AppFunction () {
     "https://jsonplaceholder.typicode.com/users"
   ]
 
+  {
+    init: function(elevators, floors) {
+        var elevator = elevators[0];
+        var elevator1 = elevators[1];// Let's use the first elevator
+
+        // Whenever the elevator is idle (has no more queued destinations) ...
+        elevator.on("idle", function() {
+            elevator.goToFloor(1);
+            elevator.goToFloor(0);
+            elevator.goToFloor(2);
+            elevator.goToFloor(3);
+            elevator.goToFloor(7);
+            elevator.goToFloor(5);
+            elevator.goToFloor(6);
+            elevator.goToFloor(4);
+        });
+
+        elevator1.on("idle", function() {
+            elevator1.goToFloor(7,true);
+            elevator1.goToFloor(6);
+            elevator1.goToFloor(5);
+            elevator1.goToFloor(4);
+            elevator1.goToFloor(3);
+            elevator1.goToFloor(2);
+            elevator1.goToFloor(1);
+            elevator1.goToFloor(0);
+        })
+    },
+    update: function(dt, elevators, floors) {
+        // We normally don't need to do anything here
+    }
+}
 /*   async function fetchFunction() {
     try {
       const [posts, albums, user] = await Promise.all(urls.map((url) => {
